@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tagüé | Gualeguaychú</title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="img/logo.svg" alt="Cargando..." class="loader-logo">
+        </div>
+    </div>
+
+    <div class="video-background-container">
+        <div class="bg-image-mobile" style="background-image: url('img/campo/exteriores/exterior7.webp');"></div>
+        
+        <video autoplay muted loop playsinline class="bg-video desktop-only-video">
+            <source src="clips/exteriores-01 (4k).mp4" type="video/mp4">
+        </video>
+        
+        <div class="video-overlay"></div>
+    </div>
+
+    <header class="header" id="mainHeader">
+        <div class="header-inner">
+            <a href="#" class="logo-link">
+                <img src="img/logo.svg" alt="El Tagüé Logo" class="logo-img">
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="parador.html" class="nav-link">Parador</a></li>
+                    <li><a href="hotel.html" class="nav-link">Hotel</a></li>
+                    <li><a href="campo.html" class="nav-link">Complejo de Campo</a></li>
+                    <li><a href="https://wa.me/5493446621925" class="nav-btn-highlight">Reservar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="index-content-wrapper">
+        <main class="main-content">
+            <div class="intro-text">
+                <p>Los mejores servicios en tu camino</p>
+                <div class="divider-small"></div>
+            </div>
+
+            <div class="cards-grid">
+                <article class="card" onclick="window.location.href='parador.html'">
+                    <div class="card-img-wrap">
+                        <img src="img/parador/kiosco.jpeg" alt="Parador El Tagüé">
+                        <span class="card-tag">Gastronomía</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Parador</h2>
+                        <p>Sabores auténticos del litoral y punto estratégico.</p>
+                        <span class="btn-text">Ver Menú <i class="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                </article>
+                
+                <article class="card" onclick="window.location.href='hotel.html'">
+                    <div class="card-img-wrap">
+                        <img src="img/hotel/recepcion.webp" alt="Hotel El Tagüé">
+                        <span class="card-tag">Alojamiento</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Hotel</h2>
+                        <p>Confort, piscina y parque para tu descanso.</p>
+                        <span class="btn-text">Reservar <i class="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="card" onclick="window.location.href='campo.html'">
+                    <div class="card-img-wrap">
+                        <img src="img/campo/exteriores/exterior6.webp" alt="Complejo de Campo">
+                        <span class="card-tag">Naturaleza</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Complejo de Campo</h2>
+                        <p>Cabañas independientes frente a la laguna.</p>
+                        <span class="btn-text">Explorar <i class="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Complejo El Tagüé · Gualeguaychú</p>
+        </footer>
+    </div>
+
+    <div class="floating-actions">
+        <a href="tel:+5493446493085" class="action-bubble dark"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/5493446621925" class="action-bubble green"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

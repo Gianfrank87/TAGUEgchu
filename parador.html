@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parador El Tagüé | Gualeguaychú</title>
+    
+    <link rel="stylesheet" href="css/parador.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+
+    <header class="header" id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.svg" alt="El Tagüé" class="logo-img">
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="#horarios" class="nav-link">Pasajes</a></li>
+                    <li><a href="#gastronomia" class="nav-link">Resto & Café</a></li>
+                    <li><a href="#regionales" class="nav-link">Regionales</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                    <li><a href="#contacto" class="nav-btn-highlight">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-bg" style="background-image: url('img/parador/frente\ horizontal\ fqachada.jpeg');"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content reveal">
+            <span class="hero-badge">Abierto 24hs</span>
+            <h1>El Tagüé Parador</h1>
+            <p>Los mejores servicios en su camino</p>
+            <div class="hero-actions">
+                <a href="#horarios" class="btn-primary">Ver Salidas de colectivos</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="global-payment-bar">
+        <div class="payment-group">
+            <span class="payment-item"><i class="fa-solid fa-money-bill-wave"></i> Efectivo</span>
+            <span class="payment-item">
+                <i class="fa-brands fa-cc-visa"></i> 
+                <i class="fa-brands fa-cc-mastercard"></i> 
+                Tarjetas de Débito y Crédito
+            </span>
+            <span class="payment-item"><i class="fa-solid fa-handshake"></i> MercadoPago</span>
+        </div>
+        <div class="payment-empresas">
+            <strong>Para Empresas:</strong> Cuentas corrientes, cheques, transferencias y depósitos.
+        </div>
+    </div>
+
+    <main class="main-content">
+        
+        <section id="horarios" class="section-container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Terminal Km 55</span>
+                <h2 class="section-title">Horarios de Ómnibus</h2>
+                <div class="divider-small"></div>
+                <p class="section-desc">Selecciona tu vista preferida y busca tu destino.</p>
+            </div>
+
+            <div class="date-navigator-container">
+                <button id="btnPrevView" class="nav-arrow" aria-label="Vista anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="current-date-display">
+                    <span id="viewTitle" style="font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 1px;">MODO DE VISTA</span>
+                    <span id="viewName" style="font-size: 1.1rem; font-weight: 700; color: var(--primary);">Por Empresas</span>
+                </div>
+                <button id="btnNextView" class="nav-arrow" aria-label="Vista siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="destinationInput" class="search-input" placeholder="Escribe tu destino (ej: Retiro, Posadas)..." autocomplete="off">
+                <ul id="suggestionsList" class="suggestions-dropdown hidden"></ul>
+            </div>
+
+            <div id="gridContainer" class="schedules-grid"></div>
+
+            <div id="listContainer" class="schedule-list-container hidden">
+                <div class="list-header-row">
+                    <span>Empresa</span>
+                    <span>Horario</span>
+                    <span style="text-align: center;">Destino</span>
+                    <span style="text-align: right;">Acción</span>
+                </div>
+                <div class="scrollable-area" id="listScrollArea"></div>
+            </div>
+
+            <div class="global-schedule-cta">
+                <div class="cta-text">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>¿No encontraste tu destino? Contamos con muchas más opciones en mostrador.</p>
+                </div>
+                <a href="https://wa.me/5493446404337?text=Hola!%20Busco%20pasajes%20a..." target="_blank" class="btn-whatsapp-small">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar Ahora
+                </a>
+            </div>
+        </section>
+
+        <section id="gastronomia" class="section-container bg-light">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Comedor abierto 24hs</span>
+                <h2 class="section-title">Nuestra Gastronomía</h2>
+                <div class="divider-small"></div>
+                <p class="section-desc">Disfrutá de nuestros platos destacados y explorá nuestra carta.</p>
+            </div>
+            
+            <div class="food-grid">
+                <article class="food-card reveal" style="animation-delay: 0.1s;">
+                    <div class="food-img"><img src="img/hotel/desayunomedialunas.webp" alt="Cafetería"></div>
+                    <div class="food-body"><h3>Bar y Cafetería</h3><p>Café de especialidad y facturas.</p></div>
+                </article>
+                
+                <article class="food-card featured-food reveal" style="animation-delay: 0.2s;">
+                    <span class="badge-food">Recomendado</span>
+                    <div class="food-img"><img src="img/hotel/bife con papas.webp" alt="Minutas"></div>
+                    <div class="food-body"><h3>Minutas</h3><p>Bife de chorizo y milanesas.</p></div>
+                </article>
+                
+                <article class="food-card reveal" style="animation-delay: 0.3s;">
+                    <div class="food-img"><img src="img/hotel/fideos.webp" alt="Pastas"></div>
+                    <div class="food-body"><h3>Viandas</h3><p>Pastas y menú del día.</p></div>
+                </article>
+            </div>
+
+            <div class="menu-banner-wide reveal" style="animation-delay: 0.4s;">
+                <div class="banner-text">
+                    <h3>Carta Completa</h3>
+                    <p>Descubrí todas las opciones que tenemos preparadas para vos en El Tagüé. Hacé clic en las imágenes para ampliarlas.</p>
+                </div>
+                <div class="banner-images gallery-grid">
+                    <div class="menu-img-container" onclick="openModal(this)">
+                        <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
+                        <img src="img/parador/menu 1.jpg" alt="Menú Página 1">
+                    </div>
+                    <div class="menu-img-container" onclick="openModal(this)">
+                        <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
+                        <img src="img/parador/menu 2.jpg" alt="Menú Página 2">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="regionales" class="section-container">
+            <div class="regional-banner reveal">
+                <div class="regional-content">
+                    <span class="section-subtitle">Tienda de Recuerdos</span>
+                    <h2 class="section-title">Productos Regionales</h2>
+                    
+                    <div class="cuotas-promo">
+                        <i class="fa-solid fa-credit-card"></i> ¡Consulte por 3 y 6 cuotas sin interés!
+                    </div>
+
+                    <p>Llevate un pedacito de Entre Ríos.</p>
+                    <ul class="regional-list">
+                        <li><i class="fa-solid fa-check"></i> Alfajores artesanales</li>
+                        <li><i class="fa-solid fa-check"></i> Mates y bombillas</li>
+                        <li><i class="fa-solid fa-check"></i> Dulces en almíbar</li>
+                        <li><i class="fa-solid fa-check"></i> Artesanías y Cuchillería</li>
+                    </ul>
+                </div>
+                
+                <div class="regional-slider-container">
+                    <div class="slider-track" id="regionalTrack">
+                        <div class="slide"><img src="img/parador/regionales.webp" alt="Regionales 1"></div>
+                        <div class="slide"><img src="img/parador/regionales.webp" alt="Regionales 2"></div>
+                        <div class="slide"><img src="img/parador/regional2.webp" alt="Regionales 3"></div>
+                        <div class="slide"><img src="img/parador/regional3.webp" alt="Regionales 4"></div>
+                        <div class="slide"><img src="img/parador/regional4.webp" alt="Regionales 5"></div>
+                    </div>
+                    
+                    <button class="slider-arrow prev" id="btnPrevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slider-arrow next" id="btnNextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                </div>
+            </div>
+        </section>
+
+   <style>
+    /* SECCIÓN AGENCIAS - DISEÑO REFINADO CON CONTRASTE MEJORADO */
+    .agencias-highlight-wrap {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 80px 40px;
+        border-radius: var(--radius, 12px);
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Sombra más marcada para que la sección entera resalte */
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
+        border: 1px solid #f0f0f0;
+
+        /* Mantenemos tu opacidad de 0.60 pero con colores más neutros para el contraste */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)), 
+                          url('img/parador/colectivos.png'); 
+        background-size: cover;
+        background-position: center;
+    }
+
+    
+    .agencias-header-group {
+        text-align: center;
+        margin-bottom: 50px;
+        z-index: 2;
+    }
+
+    .exclusive-badge {
+        display: inline-block;
+        background-color: var(--accent, #D4A373);
+        color: #ffffff;
+        padding: 6px 20px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(212, 163, 115, 0.3);
+    }
+
+    .agencias-header-group h2 {
+        font-family: var(--font-heading, 'Playfair Display', serif);
+        font-size: 2.6rem;
+        color: var(--primary, #2C3E50);
+        margin: 0;
+        line-height: 1.2;
+        
+        /* === EL CONTENEDOR TRASLÚCIDO === */
+        display: inline-block; /* Para que el fondo solo ocupe lo que mide el texto */
+        background: rgba(255, 255, 255, 0.85); /* Blanco traslúcido */
+        padding: 5px 50px;
+        border-radius: 20px; /* Redondeado elegante */
+        backdrop-filter: blur(10px); /* Desenfoque de la imagen de fondo */
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        
+        /* Limpiamos la sombra de texto vieja ya que ahora tenemos fondo sólido */
+        text-shadow: none; 
+    }
+
+    /* El "marco" interno amarillo/dorado */
+    .agencias-highlight-wrap::before {
+        content: '';
+        position: absolute;
+        top: 20px;   /* Distancia desde arriba */
+        left: 20px;  /* Distancia desde la izquierda */
+        right: 20px; /* Distancia desde la derecha */
+        bottom: 20px;/* Distancia desde abajo */
+        border: 2px solid var(--accent, #D4A373); /* El color amarillo/dorado */
+        border-radius: 10px;
+        pointer-events: none; /* Importante: permite hacer clic a lo que está abajo */
+        z-index: 1;
+        opacity: 0.6; /* Un toque de transparencia para que sea elegante */
+    }
+
+    .agencias-pillars {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 30px;
+        z-index: 2;
+    }
+
+    .pillar-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .pillar-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .icon-circle {
+        width: 85px;
+        height: 85px;
+        background-color: #ffffff;
+        border: 2px solid var(--accent, #D4A373);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        color: var(--accent, #D4A373);
+        font-size: 2rem;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    /* TRUCO 2: Cápsula de contraste para los nombres */
+    .pillar-item h3 {
+        font-family: var(--font-body, sans-serif);
+        font-size: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--primary, #2C3E50);
+        margin: 0;
+        /* Fondo semi-transparente blanco para que la letra sea legible */
+        background: rgba(255, 255, 255, 0.6);
+        padding: 8px 20px;
+        border-radius: 50px;
+        backdrop-filter: blur(2px); /* Efecto vidrio esmerilado */
+        border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .pillar-item:hover .icon-circle {
+        background-color: var(--accent, #D4A373);
+        color: #ffffff;
+        transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+        .agencias-pillars { grid-template-columns: 1fr; gap: 40px; }
+        .agencias-highlight-wrap { margin: 40px 20px; padding: 60px 20px; }
+        .agencias-header-group h2 { font-size: 2rem; }
+    }
+</style>
+
+<section id="agencias-viajes" class="reveal">
+    <div class="agencias-highlight-wrap">
+        
+        <div class="agencias-header-group">
+            <div class="exclusive-badge">Servicio Exclusivo</div>
+            <h2>Atención personalizada para agencias de viajes</h2>
+        </div>
+
+        <div class="agencias-pillars">
+            
+            <div class="pillar-item">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-file-invoice"></i>
+                </div>
+                <h3>DUT</h3>
+            </div>
+
+            <div class="pillar-item">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3>Viandas para viajes</h3>
+            </div>
+
+            <div class="pillar-item">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-passport"></i>
+                </div>
+                <h3>Visas</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        <section id="servicios" class="section-container bg-light">
+            <div class="section-header text-center">
+                <h2 class="section-title">Servicios al Viajero</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item"><i class="fa-solid fa-wifi"></i><h4>Wi-Fi</h4></div>
+                <div class="service-item"><i class="fa-solid fa-mug-hot"></i><h4>Agua Caliente</h4></div>
+                <div class="service-item"><i class="fa-solid fa-restroom"></i><h4>Baños</h4></div>
+                <div class="service-item"><i class="fa-solid fa-square-parking"></i><h4>Estacionamiento</h4></div>
+                <div class="service-item"><i class="fa-solid fa-mobile-screen-button"></i><h4>Recarga Celular</h4></div>
+                <div class="service-item"><i class="fa-solid fa-ticket"></i><h4>Venta de Pasajes</h4></div>
+            </div>
+        </section>
+
+        <section id="transportistas" class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Servicios para el Transporte</h2>
+                <div class="divider-small"></div>
+            </div>
+
+            <div class="transport-mosaic">
+                
+                <article class="transport-card wide-card reveal">
+                    <div class="transport-img-col" style="background-image: url('img/parador/colectivos.webp');">
+                        <div class="floating-icon"><i class="fa-solid fa-bus-simple"></i></div>
+                    </div>
+                    <div class="transport-content-col">
+                        <h3>Servicio para Empresas de Bus</h3>
+                        <ul class="transport-list">
+                            <li><i class="fa-solid fa-soap"></i> Servicio de limpieza de parabrisas, baños y pasillos.</li>
+                            <li><i class="fa-solid fa-warehouse"></i> Amplio estacionamiento y andenes techados.</li>
+                            <li class="highlight-item"><i class="fa-solid fa-file-invoice"></i> IMPRESIÓN DE DUT</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="transport-card compact-card reveal">
+                    <div class="compact-header" style="background-image: url('img/parador/camionesdia.webp');">
+                        <div class="overlay-compact"></div>
+                        <div class="icon-compact"><i class="fa-solid fa-truck-front"></i></div>
+                        <h4>Servicios para Camioneros</h4>
+                    </div>
+                    <div class="compact-body">
+                        <ul class="transport-list">
+                            <li><i class="fa-solid fa-print"></i> Impresiones de cartas de porte</li>
+                            <li><i class="fa-solid fa-copy"></i> Pases, fotocopias y escáner</li>
+                            <li><i class="fa-solid fa-square-parking"></i> Playón de estacionamiento</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="transport-card atm-block reveal">
+                    <div class="atm-content-flex">
+                        <span class="status-badge">Disponible 24hs</span>
+                        <img src="img/logos/cajero-express.svg" alt="Cajero Express" class="atm-logo-large">
+                        <div class="atm-info">
+                            <h5>Cajero Automático</h5>
+                            <p>Extracciones y consultas rápidas en el lugar.</p>
+                        </div>
+                        <a href="#ubicacion" class="btn-outline-atm">Ver Ubicación</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="ubicacion" class="section-container">
+            <div class="location-card">
+                <div class="location-text">
+                    <span class="section-subtitle">Ruta 14 - Km 55</span>
+                    <h2 class="section-title">Cómo Llegar</h2>
+                    <div class="divider-small" style="margin: 15px 0;"></div>
+                    <ul class="location-details">
+                        <li><i class="fa-solid fa-location-dot"></i> <strong>Dirección:</strong> Ruta Nacional 14, Km 55.</li>
+                        <li><i class="fa-solid fa-clock"></i> <strong>Atención:</strong> Abierto las 24 horas.</li>
+                        <li><i class="fa-solid fa-square-parking"></i> <strong>Parking:</strong> Gratuito.</li>
+                    </ul>
+                    <a href="https://maps.app.goo.gl/xkFL5eergVaTA5ym8" target="_blank" class="btn-primary" style="margin-top: 20px;">
+                        <i class="fa-solid fa-location-arrow"></i> Ver en Google Maps
+                    </a>
+                </div>
+                <div class="location-map-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.501222738296!2d-58.62336862357091!3d-33.04326877677655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe!5e0!3m2!1ses-419!2sar!4v1769280314769!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-cta" id="contacto">
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Visite el Parador</h2>
+            <div class="contact-info">
+                <span><i class="fa-solid fa-location-dot"></i> Ruta 14, Km 55</span>
+                <span><i class="fa-brands fa-whatsapp"></i> +54 9 3446 404337</span>
+            </div>
+            <p class="copyright">© 2026 Parador El Tagüé</p>
+        </div>
+    </footer>
+
+    <div class="floating-actions">
+        <a href="tel:+5493446404337" class="action-bubble dark"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/5493446404337" class="action-bubble green"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <div id="imageModal" class="image-modal" style="display: none;">
+        <span class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
+        <button class="modal-prev" onclick="navigateImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+        <button class="modal-next" onclick="navigateImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

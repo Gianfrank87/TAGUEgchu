@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel El Tagüé en Gualeguaychú. Su refugio premium en el litoral con 130 plazas, piscina, parque y el mejor descanso en la Ruta 14.">
+    <title>Hotel El Tagüé | Tu Refugio en Gualeguaychú</title>
+    
+    <link rel="stylesheet" href="css/hotel.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <link rel="preload" as="image" href="img/hotel/fachada.webp" media="(max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header" id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.svg" alt="El Tagüé" class="logo-img">
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="#habitaciones" class="nav-link">Habitaciones</a></li>
+                    <li><a href="#eventos" class="nav-link">Eventos</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                    <li><a href="#booking" class="nav-btn-highlight">Reservar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-slideshow">
+            <div class="slide" style="background-image: url('img/hotel/cartel.jpg');"></div>
+            <div class="slide" style="background-image: url('img/hotel/pileta1.jpg');"></div>
+            <div class="slide" style="background-image: url('img/hotel/cartel2.jpg');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content reveal">
+            <span class="hero-badge">Trayectoria & Calidad</span>
+            <h1>El Descanso que<br>su Viaje Merece</h1>
+            <p>Confort, piscina y parque a la vera de la Ruta 14.</p>
+        </div>
+
+        <div class="booking-wrapper reveal" id="booking">
+            <div class="booking-container">
+                <div class="bb-item">
+                    <label>Llegada</label>
+                    <input type="text" id="checkin" class="bb-input" placeholder="Seleccionar fecha" readonly>
+                </div>
+                <div class="bb-divider"></div>
+                <div class="bb-item">
+                    <label>Salida</label>
+                    <input type="text" id="checkout" class="bb-input" placeholder="Seleccionar fecha" readonly>
+                </div>
+                <div class="bb-divider"></div>
+                <div class="bb-item">
+                    <label>Huéspedes</label>
+                    <select id="guests" class="bb-input">
+                        <option value="2" selected>2 Personas</option>
+                        <option value="1">1 Persona</option>
+                        <option value="3">3 Personas</option>
+                        <option value="4">4 Personas</option>
+                        <option value="+5">+ de 5</option>
+                    </select>
+                </div>
+                <button id="btnConsultar" class="btn-primary">Consultar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container premium-intro">
+        <div class="premium-grid">
+            
+            <div class="premium-visuals reveal">
+                <div class="decorative-frame"></div>
+                <div class="img-main">
+                    <img src="img/hotel/cartel.jpg" alt="Piscina exterior del Hotel El Tagüé">
+                </div>
+                <div class="img-overlap">
+                    <img src="img/hotel/pileeta.jpg" alt="Recepción">
+                </div>
+                <div class="experience-badge">
+                    <span class="badge-number">130</span>
+                    <span class="badge-text">Plazas</span>
+                </div>
+            </div>
+
+            <div class="premium-text reveal" style="transition-delay: 0.2s;">
+                <span class="section-subtitle">Bienvenidos</span>
+                <h2 class="section-title">Su Refugio en<br>el Litoral</h2>
+                <div class="elegant-divider-left"></div>
+                
+                <p class="section-desc">
+                    Ubicado estratégicamente para ser su parada ideal o su destino final. 
+                    Contamos con espacios diseñados garantizando el mejor descanso de la región, rodeados de naturaleza.
+                </p>
+                
+                <a href="#habitaciones" class="btn-outline mt-l">Ver habitaciones</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="servicios" class="section-container bg-soft" style="padding: 40px;">
+        <div class="amenities-grid">
+            <div class="amenity-card reveal">
+                <div class="icon-box"><i class="fa-solid fa-person-swimming"></i></div>
+                <h4>Piscina</h4>
+                <p>Solárium y parque.</p>
+            </div>
+            <div class="amenity-card reveal" style="transition-delay: 0.1s;">
+                <div class="icon-box"><i class="fa-solid fa-car"></i></div>
+                <h4>Cocheras</h4>
+                <p>Estacionamiento techado.</p>
+            </div>
+            <div class="amenity-card reveal" style="transition-delay: 0.2s;">
+                <div class="icon-box"><i class="fa-solid fa-mug-hot"></i></div>
+                <h4>Desayuno</h4>
+                <p>Buffet completo.</p>
+            </div>
+            <div class="amenity-card reveal" style="transition-delay: 0.3s;">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4>Seguridad</h4>
+                <p>Predio monitoreado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habitaciones" class="section-container">
+        <div class="rooms-experience-grid">
+            <div class="re-text reveal">
+                <span class="section-subtitle">Alojamiento</span>
+                <h2 class="section-title">Nuestras Habitaciones</h2>
+                <p class="section-desc">Espacios amplios y luminosos, equipados con todo lo necesario para brindar el máximo confort y reponer energías luego de un largo viaje.</p>
+                
+                <ul class="re-amenities">
+                    <li><i class="fa-solid fa-bed"></i> Camas y sommiers de primera calidad</li>
+                    <li><i class="fa-solid fa-wifi"></i> Wi-Fi gratuito</li>
+                    <li><i class="fa-solid fa-temperature-half"></i> Climatización frío/calor</li>
+                    <li><i class="fa-solid fa-bath"></i> Baño privado</li>
+                </ul>
+                
+                <div class="re-actions mt-l">
+                    <button class="btn-primary" onclick="location.href='#booking'">Consultar Fechas</button>
+                    <button class="btn-text" onclick="openModal(document.getElementById('masFotosHabitaciones').firstElementChild)">Ver Galería Completa <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="re-images reveal">
+                <img src="img/hotel/matrimonial.jpg" alt="Habitación Matrimonial" class="re-img-main" loading="lazy" onclick="openModal(this)">
+                <div class="re-img-col">
+                    <img src="img/hotel/cuadruple matrimopnial.jpg" alt="Habitación Cuádruple" loading="lazy" onclick="openModal(this)">
+                    <img src="img/hotel/triple matrimonial.jpg" alt="Habitación Triple" loading="lazy" onclick="openModal(this)">
+                </div>
+            </div>
+
+            <div style="display: none;" id="masFotosHabitaciones" class="gallery-grid">
+                <img src="img/hotel/matrimonial.jpg" alt="Matrimonial">
+                <img src="img/hotel/cuadruple matrimopnial.jpg" alt="Cuádruple">
+                <img src="img/hotel/triple matrimonial.jpg" alt="Triple Matrimonial">
+                <img src="img/hotel/habitacion3.webp" alt="Doble">
+                <img src="img/hotel/habitacion2.webp" alt="Triple">
+                <img src="img/hotel/habitacion.webp" alt="Single">
+                <img src="img/hotel/triple simple.jpg" alt="Triple Simple">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container bg-soft">
+        <div class="breakfast-grid">
+            <div class="breakfast-content reveal">
+                <span class="section-subtitle">Gastronomía</span>
+                <h2 class="section-title">Desayuno Buffet</h2>
+                <p class="section-desc">Comience su mañana con nuestro servicio de desayuno artesanal, diseñado para brindarle las energías necesarias para continuar su viaje o disfrutar del día.</p>
+                <div class="feature-tags">
+                    <span class="tag"><i class="fa-solid fa-croissant"></i> Panadería Local</span>
+                    <span class="tag"><i class="fa-solid fa-mug-hot"></i> Cafetería</span>
+                    <span class="tag"><i class="fa-solid fa-apple-whole"></i> Frutas</span>
+                </div>
+            </div>
+            <div class="breakfast-gallery reveal">
+                <img src="img/hotel/mesa desayuno.webp" alt="Mesa de desayuno" class="bg-img" loading="lazy" onclick="openModal(this)">
+                <img src="img/hotel/desayuno2.webp" alt="Medialunas" class="fg-img" loading="lazy" onclick="openModal(this)">
+            </div>
+        </div>
+    </section>
+
+    <section id="eventos" class="section-container">
+        <div class="events-card reveal">
+            <div class="events-img">
+                <img src="img/hotel/entrada.webp" alt="Salón de Eventos" loading="lazy" onclick="openModal(this)">
+            </div>
+            <div class="events-info">
+                <span class="section-subtitle">Corporativo</span>
+                <h2 class="section-title">Salón de Eventos</h2>
+                <p class="section-desc">Un espacio exclusivo diseñado para reuniones, capacitaciones y presentaciones con todas las comodidades técnicas.</p>
+                <ul class="events-list">
+                    <li><i class="fa-solid fa-check"></i> Capacidad 30 Pax (Auditorio)</li>
+                    <li><i class="fa-solid fa-check"></i> Pantalla y Proyector</li>
+                    <li><i class="fa-solid fa-check"></i> Sistema de Sonido</li>
+                    <li><i class="fa-solid fa-check"></i> Servicio de Break</li>
+                </ul>
+                <a href="https://wa.me/5493446621925?text=Hola,%20quisiera%20consultar%20por%20el%20salón%20de%20eventos." target="_blank" class="btn-primary mt-l">Consultar Disponibilidad</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container spp-section">
+        <div class="spp-header text-center reveal">
+            <span class="section-subtitle">Comunidad Tagüé</span>
+            <h2 class="section-title">Experiencias Reales</h2>
+            <div class="elegant-divider-left" style="margin: 0 auto 40px;"></div>
+        </div>
+        
+        <div class="spp-grid">
+            <div class="spp-video-col reveal">
+                <div class="spp-decorative-frame"></div>
+                <div class="spp-video-wrapper">
+                    <video autoplay muted loop playsinline class="spp-video">
+                        <source src="Clips/instahotel.mp4" type="video/mp4">
+                    </video>
+                    <div class="spp-video-overlay">
+                        <a href="https://www.instagram.com/reel/DLKSPYPuCRE/" target="_blank" class="spp-ig-btn">
+                            <i class="fa-solid fa-play"></i> Ver Reel
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spp-comments-col reveal" style="transition-delay: 0.2s;">
+                
+                <div class="spp-comment-card">
+                    <div class="spp-comment-header">
+                        <img src="img/redes/comentario 1.jpg" alt="Usuario" class="spp-avatar" onerror="this.src='img/logo.svg'; this.style.padding='5px'; this.style.background='#1A362D';">
+                        <div class="spp-user-info">
+                            <span class="spp-username">@karinaalejandrabrittes</span>
+                            <span class="spp-time">Hace tiempo</span>
+                        </div>
+                    </div>
+                    <p class="spp-comment-text">"Hermoso lugar...estuvimos en mayo..."</p>
+                </div>
+
+                <div class="spp-comment-card">
+                    <div class="spp-comment-header">
+                        <img src="img/redes/comentario 2.jpg" alt="Usuario" class="spp-avatar" onerror="this.src='img/logo.svg'; this.style.padding='5px'; this.style.background='#1A362D';">
+                        <div class="spp-user-info">
+                            <span class="spp-username">@la.arequera</span>
+                            <span class="spp-time">Hace tiempo</span>
+                        </div>
+                    </div>
+                    <p class="spp-comment-text">"La mejor opción para un descanso asegurado"</p>
+                </div>
+
+                <div class="spp-comment-card">
+                    <div class="spp-comment-header">
+                        <img src="img/redes/comentario 3.jpg" alt="Usuario" class="spp-avatar" onerror="this.src='img/logo.svg'; this.style.padding='5px'; this.style.background='#1A362D';">
+                        <div class="spp-user-info">
+                            <span class="spp-username">@luciartes74</span>
+                            <span class="spp-time">Hace tiempo</span>
+                        </div>
+                    </div>
+                    <p class="spp-comment-text">"Lo recomiendo hermosos lugar estuvimos de ida y vueltas de nuestro viaje"</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container native-feed-section reveal">
+        <div class="native-feed-header">
+            <div class="nf-profile">
+                <a href="https://www.instagram.com/hoteltague/?hl=es" target="_blank">
+                    <img src="img/redes/logo insta.jpg" alt="Hotel El Tagüé Logo" class="nf-logo" style="background: var(--primary); padding: 10px;">
+                </a>
+                
+                <div class="nf-info">
+                    <h3>
+                        <a href="https://www.instagram.com/hoteltague/?hl=es" target="_blank" style="text-decoration: none; color: inherit;">
+                            @hoteltague
+                        </a>
+                    </h3>
+                    <p>Ruta nacional 14 - Km 56, Gualeguaychú 2820</p>
+                </div>
+            </div>
+            
+            <a href="https://www.instagram.com/hoteltague/?hl=es" target="_blank" class="btn-primary nf-btn">
+                <i class="fa-brands fa-instagram"></i> Seguir
+            </a>
+        </div>
+
+        <div class="masonry-gallery nf-grid">
+            <a href="https://www.instagram.com/p/B5nJvrvnh2I/?hl=es" target="_blank" class="nf-item tall">
+                <img src="img/hotel/pileta insta.jpg" alt="Piscina exterior" loading="lazy">
+                <div class="nf-overlay"><i class="fa-solid fa-heart"></i></div>
+            </a>
+            <a href="https://www.instagram.com/p/DLKSPYPuCRE/?hl=es" target="_blank" class="nf-item wide">
+                <img src="img/hotel/recepcion.webp" alt="Recepción" loading="lazy">
+                <div class="nf-overlay"><i class="fa-solid fa-heart"></i></div>
+            </a>
+            <a href="https://www.instagram.com/p/Byf3poOnYsK/?hl=es" target="_blank" class="nf-item">
+                <img src="img/hotel/palmetas.jpg" alt="hotel palmeras" loading="lazy">
+                <div class="nf-overlay"><i class="fa-solid fa-heart"></i></div>
+            </a>
+            <a href="https://www.instagram.com/p/B5WR892H8I4/?hl=es" target="_blank" class="nf-item">
+                <img src="img/hotel/taguecarteleria.webp" alt="Ingreso al predio" loading="lazy">
+                <div class="nf-overlay"><i class="fa-solid fa-heart"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="location-section">
+        <div class="location-info reveal">
+            <span class="section-subtitle">Gualeguaychú</span>
+            <h2>Ubicación Estratégica</h2>
+            <p>Seleccione un punto de interés para verlo en el mapa.</p>
+            
+            <div class="places-grid">
+                <div class="place-btn" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d53534.112991269154!2d-58.64735357787356!3d-33.00688470392408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20y%20Hotel%20El%20Tag%C3%BCe!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95b008c5e3240503%3A0x13e6f8606d9e96e7!2sguaychu!3m2!1d-32.970991999999995!2d-58.592397999999996!5e0!3m2!1ses-419!2sar!4v1769046938070!5m2!1ses-419!2sar')">
+                    <i class="fa-solid fa-water"></i> Termas
+                </div>
+                <div class="place-btn" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d861952.522392849!2d-59.08748360874355!3d-32.445880143658236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20y%20Hotel%20El%20Tag%C3%BCe!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95ae1be8452c473d%3A0x3a513efd67ddd707!2sParque%20Nacional%20El%20Palmar%2C%20Kil%C3%B3metro%2C%20Ubajay%2C%20Entre%20R%C3%ADos!3m2!1d-31.8543085!2d-58.3194309!5e0!3m2!1ses-419!2sar!4v1769046985459!5m2!1ses-419!2sar')">
+                    <i class="fa-solid fa-tree"></i> El Palmar
+                </div>
+                <div class="place-btn" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d26761.128750098156!2d-58.591416651985355!3d-33.02641307645667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20y%20Hotel%20El%20Tag%C3%BCe!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95baa82ffeff2129%3A0xd794a87cef095cb1!2sCors%C3%B3dromo%20Jose%20Luis%20Gestro%2C%20Maestra%20Piccini%201100%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.0175737!2d-58.520038299999996!5e0!3m2!1ses-419!2sar!4v1769046964335!5m2!1ses-419!2sar')">
+                    <i class="fa-solid fa-mask"></i> Carnaval
+                </div>
+            </div>
+            <button class="btn-text mt-l" onclick="updateMap(null, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.501222738296!2d-58.62336862357091!3d-33.04326877677655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe!5e0!3m2!1ses-419!2sar!4v1769046901040!5m2!1ses-419!2sar')" style="color: #FFF; border-bottom-color: rgba(255,255,255,0.3);">
+                <i class="fa-solid fa-rotate-left"></i> Volver al Hotel
+            </button>
+        </div>
+        <div class="location-map">
+            <div id="mapLoader" class="map-loader"><div class="spinner"></div></div>
+            <iframe id="dynamicMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.501222738296!2d-58.62336862357091!3d-33.04326877677655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe!5e0!3m2!1ses-419!2sar!4v1769046901040!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="img/logo.svg" alt="Logo Footer" class="footer-logo">
+                <p>Su refugio de descanso en la Ruta 14. Calidad y atención personalizada.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hoteltague/?hl=es" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#habitaciones">Habitaciones</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#ubicacion">Cómo llegar</a></li>
+                    <li><a href="index.html">Volver al Inicio</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +54 9 3446 493085</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> +54 9 3446 621925</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Ruta 14 Km 60, Gualeguaychú</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Hotel El Tagüé. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5493446621925" class="floating-wsp" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">×</span>
+        <button class="modal-nav prev modal-prev" onclick="navigateImage(-1)">❮</button>
+        <img class="modal-content" id="modalImage">
+        <button class="modal-nav next modal-next" onclick="navigateImage(1)">❯</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

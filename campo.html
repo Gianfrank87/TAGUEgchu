@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejo de Campo Tagüé | Naturaleza Viva</title>
+    
+    <link rel="stylesheet" href="css/campo.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" as="image" href="img/campo/exteriores/fotograma.webp" media="(max-width: 768px)">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+<body>
+
+    <header class="header" id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.svg" alt="El Tagüé" class="logo-img" width="150" height="100">
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="#tarifas" class="nav-link">Propuestas</a></li> <li><a href="#galerias" class="nav-link">Galería</a></li>
+                    <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                    <li><a href="https://wa.me/5493446621925" class="nav-btn-highlight">Reservar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-video-section">
+        <div class="video-overlay"></div>
+        
+        <video autoplay muted loop playsinline class="hero-video-bg" poster="img/campo/exteriores/fotograma.webp" preload="auto">
+            <source src="Clips/Dron-10 (HD).mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content reveal">
+            <span class="hero-subtitle">Gualeguaychú • Entre Ríos</span>
+            <h1>El Tagüé<br><em>Complejo de Campo</em></h1>
+            <a href="#tarifas" class="btn-hero">Reservar Ahora</a>
+        </div>
+        
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path fill="#F4F4F0" d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,58.7C1120,53,1280,43,1360,37.3L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="intro-section" style="background-color: #F4F4F0;">
+        <div class="container reveal">
+            <div class="intro-wrapper">
+                <h2 class="section-title">Complejo de Campo El Tagüé</h2>
+                <div class="separator-leaf"><i class="fa-solid fa-leaf"></i></div>
+                <p class="intro-text">
+                    Apart hotel totalmente equipados a metros del Parador y Hotel El Tagüé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifas" class="section-container section-pricing">
+        <div class="video-overlay"></div>
+        
+        <video autoplay muted loop playsinline class="video-layer video-base lazy-video" preload="none">
+            <source data-src="Clips/Exteriores-01 (4K).mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline class="video-layer video-fade lazy-video" preload="none">
+            <source data-src="Clips/Dron-16 (4K).mp4" type="video/mp4">
+        </video>
+
+        <div class="container relative-z">
+            <div class="section-header text-center reveal">
+                <h3 class="gallery-title" style="color:#FFF; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">Nuestras Propuestas</h3>
+            </div>
+
+            <div class="pricing-deck">
+                <div class="pricing-glass reveal">
+                    <div class="glass-header"><h4>Estadía</h4><span class="sub-price">Horarios</span></div>
+                    <ul class="glass-features">
+                        <li><i class="fa-solid fa-clock"></i> Check in 15 hs</li>
+                        <li><i class="fa-solid fa-clock"></i> Check out 10 hs</li>
+                        <li style="align-items: flex-start; line-height: 1.4;">
+                            <i class="fa-solid fa-star" style="margin-top: 4px; flex-shrink: 0;"></i> 
+                            <span>Posibilidad de contratar late check out (salida 18 hs)</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5493446621925" class="btn-glass">CONSULTAR</a>
+                </div>
+
+                <div class="pricing-glass featured reveal">
+                    <div class="badge-glass">Recomendado</div>
+                    <div class="glass-header"><h4>Relax Total</h4><span class="sub-price">Semanal</span></div>
+                    <ul class="glass-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>7 Noches</strong></li>
+                        <li><i class="fa-solid fa-check"></i> Casas Independientes</li>
+                        <li><i class="fa-solid fa-check"></i> Consultar Promociones</li>
+                    </ul>
+                    <a href="https://wa.me/5493446621925" class="btn-glass filled">RESERVAR AHORA</a>
+                </div>
+
+                <div class="pricing-glass reveal">
+                    <div class="glass-header"><h4>Salón de Eventos</h4><span class="sub-price">Celebraciones</span></div>
+                    <ul class="glass-features">
+                        <li style="justify-content: center; text-align: center; flex-direction: column; gap: 15px;">
+                            <i class="fa-solid fa-champagne-glasses" style="font-size: 1.5rem; color: var(--accent);"></i>
+                            <span>Consulte tarifario para su evento</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5493446621925" class="btn-glass">CONSULTAR</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path fill="#FFF" d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,58.7C1120,53,1280,43,1360,37.3L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="galerias" class="section-container">
+        <div class="container">
+            
+            <div class="gallery-block reveal">
+                <div class="gallery-header">
+                    <h3>Interiores</h3>
+                    <p>Espacios amplios y luminosos.</p>
+                </div>
+                
+                <div class="slider-wrapper">
+                    <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="slider-track" id="track-interiores">
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior4.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior1.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior2.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior7.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior5.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior3.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior6.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior8.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/interiores/interior9.webp" loading="lazy"></div>
+                    </div>
+                    <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots" id="dots-interiores"></div>
+
+                <div class="text-center mt-30">
+                    <button class="btn-outline-dark" onclick="openFullGridModal('interiores')">
+                        <i class="fa-solid fa-grid-2"></i> Ver Grilla Completa
+                    </button>
+                </div>
+            </div>
+
+            <hr class="elegant-divider">
+
+            <div class="gallery-block reveal">
+                <div class="gallery-header">
+                    <h3>Nuestro Campo</h3>
+                    <p>Fauna, flora y atardeceres.</p>
+                </div>
+
+                <div class="slider-wrapper">
+                    <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="slider-track" id="track-exteriores">
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior1.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior3.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior6.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior8.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior2.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior4.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior5.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior7.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior9.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior10.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/exteriores/exterior11.webp" loading="lazy"></div>
+                    </div>
+                    <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots" id="dots-exteriores"></div>
+
+                <div class="text-center mt-30">
+                    <button class="btn-outline-dark" onclick="openFullGridModal('exteriores')">
+                        <i class="fa-solid fa-grid-2"></i> Ver Grilla Completa
+                    </button>
+                </div>
+            </div>
+            
+            <hr class="elegant-divider">
+
+             <div class="gallery-block reveal">
+                <div class="gallery-header">
+                    <h3>Momentos Tagüé</h3>
+                    <p>Experiencias únicas.</p>
+                </div>
+                <div class="slider-wrapper">
+                    <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="slider-track" id="track-lifestyle">
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle1.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle2.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle5.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle3.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle4.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle6.webp" loading="lazy"></div>
+                        <div class="slide-item" onclick="openModal(this)"><img src="img/campo/lifestyle/lifestyle7.webp" loading="lazy"></div>
+                    </div>
+                    <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots" id="dots-lifestyle"></div>
+                <div class="text-center mt-30">
+                    <button class="btn-outline-dark" onclick="openFullGridModal('lifestyle')">
+                        <i class="fa-solid fa-grid-2"></i> Ver Grilla Completa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-tour" class="cinema-section">
+        <video autoplay muted loop playsinline class="cinema-video-bg lazy-video" preload="none">
+            <source data-src="Clips/Dron-06 (4K).mp4" type="video/mp4">
+        </video>
+        <div class="cinema-gradient-overlay"></div>
+        <div class="cinema-content reveal">
+            <span class="cinema-label">Experiencia Visual</span>
+            <h2>Descubrí la Inmensidad</h2>
+            <button class="btn-play-pulse" onclick="openVideoModal('99hct3lDWpE')">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <span class="play-caption" style="display:block; margin-top:15px;">Ver Video Completo</span>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="section-container bg-pattern">
+        <div class="container">
+            <div class="section-header text-center reveal special-title">
+                <span class="watermark-title">MAPA</span>
+                <h3 class="gallery-title">Ubicación Estratégica</h3>
+                <div class="divider-center"></div>
+            </div>
+            
+            <div class="location-split">
+                <div class="loc-list-visual reveal">
+                    <div class="loc-item-visual active" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d53534.112991269154!2d-58.64735357787356!3d-33.00688470392408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe%2C%20RN14%20KM%2055%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95b008c5e3240503%3A0x13e6f8606d9e96e7!2sTermas%20del%20Guaych%C3%BA%2C%20RN14%2064%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-32.970991999999995!2d-58.592397999999996!5e0!3m2!1ses-419!2sar!4v1770787595223!5m2!1ses-419!2sar')">
+                        <div class="loc-thumb"><img src="img/cercanias/termasCompleto.webp" alt="Termas"></div>
+                        <div class="loc-content"><h4>Termas de Guaychú</h4><span><i class="fa-solid fa-clock"></i> 7 min (7 km)</span></div>
+                    </div>
+                    <div class="loc-item-visual" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d53522.28243305237!2d-58.60445837768007!3d-33.02637201778481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe%2C%20RN14%20KM%2055%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95baa9d3be0918f5%3A0x3fb19a666c042b04!2sCostanera%20de%20Gualeguaych%C3%BA%2C%20E3269%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.0103083!2d-58.504739!5e0!3m2!1ses-419!2sar!4v1770787625076!5m2!1ses-419!2sar')">
+                        <div class="loc-thumb"><img src="img/cercanias/playapuente.webp" alt="Playas"></div>
+                        <div class="loc-content"><h4>Playas del Río</h4><span><i class="fa-solid fa-clock"></i> 10 min (10 km)</span></div>
+                    </div>
+                    <div class="loc-item-visual" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d105737.1093994732!2d-58.58902201841762!3d-33.035196144948934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe%2C%20RN14%20KM%2055%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95baa99fa91c127b%3A0x9b5e8a7e98e71fc3!2s%C3%91andubaysal%2C%20Costa%20Uruguay%20Norte%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.063461499999995!2d-58.390704899999996!5e0!3m2!1ses-419!2sar!4v1770787647103!5m2!1ses-419!2sar')">
+                        <div class="loc-thumb"><img src="img/cercanias/ñandu.webp" alt="Ñandubaysal"></div>
+                        <div class="loc-content"><h4>Ñandubaysal</h4><span><i class="fa-solid fa-clock"></i> 30 min (30 km)</span></div>
+                    </div>
+                    <div class="loc-item-visual" onclick="updateMap(this, 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d53522.85020425616!2d-58.59281827768939!3d-33.02543701711949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe%2C%20RN14%20KM%2055%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.043273299999996!2d-58.6207937!4m5!1s0x95baa9c43ee61823%3A0x5fcceb143f0ee635!2sTermas%20del%20Gualeguaych%C3%BA%2C%20Ruta%20prov.%20N%C2%BA42%2C%20Km%2022.5%2C%20E2820%20Gualeguaych%C3%BA%2C%20Entre%20R%C3%ADos!3m2!1d-33.016777399999995!2d-58.4814588!5e0!3m2!1ses-419!2sar!4v1770787666416!5m2!1ses-419!2sar')">
+                        <div class="loc-thumb"><img src="img/cercanias/almeida.webp" alt="Centro"></div>
+                        <div class="loc-content"><h4>Termas Gualeguaychú</h4><span><i class="fa-solid fa-clock"></i> 12 min (12 km)</span></div>
+                    </div>
+                    <button class="btn-reset-map-small" onclick="updateMap(null, 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.501222738296!2d-58.623368623570904!3d-33.04326877677655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe!5e0!3m2!1ses-419!2sar!4v1770787688908!5m2!1ses-419!2sar')"><i class="fa-solid fa-location-dot"></i> Ver Complejo El Tagüé</button>
+                </div>
+
+                <div class="loc-map-container reveal">
+                    <div id="mapLoader" class="map-loader-overlay"><div class="spinner"></div></div>
+                    <iframe id="dynamicMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.501222738296!2d-58.623368623570904!3d-33.04326877677655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe!5e0!3m2!1ses-419!2sar!4v1770787688908!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-whatsapp">
+        <div class="container text-center">
+            <h3 class="cta-title">¿Tenés dudas sobre las cabañas?</h3>
+            <p class="cta-text">Escribinos y te asesoramos personalmente para armar tu plan ideal.</p>
+            <a href="https://wa.me/5493446621925" class="btn-cta-big"><i class="fa-brands fa-whatsapp"></i> Enviar Mensaje</a>
+        </div>
+    </section>
+
+    <footer class="aldea-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget brand-widget">
+                    <img src="img/logo.svg" alt="Logo Footer" class="footer-logo">
+                    <p>Sobre la costa del Río Uruguay, enmarcada en un paisaje único. El Tagüé te espera para vivir aventuras inolvidables.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget links-widget">
+                    <h4>El Complejo</h4>
+                    <ul>
+                        <li><a href="#galerias">Cabañas</a></li>
+                        <li><a href="#galerias">El Campo</a></li>
+                        <li><a href="#ubicacion">Cómo llegar</a></li>
+                        <li><a href="index.html">Volver al Inicio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget contact-widget">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i> +54 9 3446 493085</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> +54 9 3446 621925</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Ruta 14 Km 60, Gualeguaychú</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Complejo El Tagüé. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">×</span>
+        <img class="modal-content" id="modalImage">
+        <button class="modal-nav modal-prev" onclick="event.stopPropagation(); navigateImage(-1)">❮</button>
+        <button class="modal-nav modal-next" onclick="event.stopPropagation(); navigateImage(1)">❯</button>
+    </div>
+
+    <div id="videoModal" class="modal video-modal" onclick="closeVideoModal()">
+        <span class="modal-close">×</span>
+        <div class="video-modal-container"><div id="youtubePlayer"></div></div>
+    </div>
+
+    <div id="fullGridModal" class="modal-full-grid">
+        <div class="modal-grid-header">
+            <h3 id="fullGridTitle">Galería Completa</h3>
+            <span class="modal-grid-close" onclick="closeFullGridModal()">×</span>
+        </div>
+        <div class="modal-grid-content" id="fullGridContent"></div>
+    </div>
+
+    <div id="data-interiores" style="display:none;">
+        <img src="img/campo/interiores/interior1.webp"><img src="img/campo/interiores/interior2.webp"><img src="img/campo/interiores/interior3.webp"><img src="img/campo/interiores/interior4.webp"><img src="img/campo/interiores/interior5.webp"><img src="img/campo/interiores/interior6.webp"><img src="img/campo/interiores/interior7.webp"><img src="img/campo/interiores/interior8.webp"><img src="img/campo/interiores/interior9.webp">
+    </div>
+    <div id="data-exteriores" style="display:none;">
+        <img src="img/campo/exteriores/exterior1.webp"><img src="img/campo/exteriores/exterior2.webp"><img src="img/campo/exteriores/exterior3.webp"><img src="img/campo/exteriores/exterior4.webp"><img src="img/campo/exteriores/exterior5.webp"><img src="img/campo/exteriores/exterior6.webp"><img src="img/campo/exteriores/exterior7.webp"><img src="img/campo/exteriores/exterior8.webp"><img src="img/campo/exteriores/exterior9.webp"><img src="img/campo/exteriores/exterior10.webp"><img src="img/campo/exteriores/exterior11.webp"><img src="img/campo/exteriores/exterior12.webp"><img src="img/campo/exteriores/exterior13.webp"><img src="img/campo/exteriores/exterior14.webp"><img src="img/campo/exteriores/exterior15.webp">
+    </div>
+    <div id="data-lifestyle" style="display:none;">
+        <img src="img/campo/lifestyle/lifestyle1.webp"><img src="img/campo/lifestyle/lifestyle2.webp"><img src="img/campo/lifestyle/lifestyle3.webp"><img src="img/campo/lifestyle/lifestyle4.webp"><img src="img/campo/lifestyle/lifestyle5.webp"><img src="img/campo/lifestyle/lifestyle6.webp"><img src="img/campo/lifestyle/lifestyle7.webp"><img src="img/campo/lifestyle/lifestyle8.webp"><img src="img/campo/lifestyle/lifestyle9.webp"><img src="img/campo/lifestyle/lifestyle10.webp"><img src="img/campo/lifestyle/lifestyle11.webp"><img src="img/campo/lifestyle/lifestyle12.webp"><img src="img/campo/lifestyle/lifestyle13.webp"><img src="img/campo/lifestyle/lifestyle14.webp"><img src="img/campo/lifestyle/lifestyle15.webp"><img src="img/campo/lifestyle/lifestyle16.webp"><img src="img/campo/lifestyle/lifestyle17.webp"><img src="img/campo/lifestyle/lifestyle18.webp"><img src="img/campo/lifestyle/lifestyle19.webp"><img src="img/campo/lifestyle/lifestyle20.webp"><img src="img/campo/lifestyle/lifestyle21.webp"><img src="img/campo/lifestyle/lifestyle22.webp">
+    </div>
+
+    <div class="floating-actions">
+        <a href="https://wa.me/5493446621925" class="action-bubble"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
