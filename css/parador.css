@@ -308,8 +308,14 @@ ul { list-style: none; padding: 0; margin: 0; }
     display: flex; flex-direction: column; 
 }
 .food-card:hover { transform: translateY(-5px); }
-.food-img { height: 200px; overflow: hidden; position: relative; }
-.food-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.food-img { width: 100%;
+    aspect-ratio: 4 / 3; /* Da un formato más cuadrado, ideal para platos de comida */
+    overflow: hidden; 
+    position: relative; }
+.food-img img { width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Mantenemos cover para que llene el espacio */
+    transition: 0.5s; }
 .food-card:hover .food-img img { transform: scale(1.05); }
 
 .food-body { 
